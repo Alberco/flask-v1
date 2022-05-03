@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{%  endblock title  %}
+{% block content %}
+<div class="container">
+    <h1 class="my-3">Update Manga</h1>
+    <div class="card">
+        <div class="card-header">
+            Upgrade Manga
+        </div>
+        <div class="card-body">
+            <form method="POST" class="form-register">
+                <div class="mb-3">
+                    {{ form.csrf_token }}
+                    {{ form.title.label(class="form-label") }}
+                    {{ form.title(class="form-control",placeholder="Title") }}
+
+                    {{ form.descripcion.label(class="form-label") }}
+                    {{ form.descripcion(class="form-control",placeholder="Description")}}
+                    <br>
+                    {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
