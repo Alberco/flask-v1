@@ -1,0 +1,5 @@
+recurso/
+__pycache__/
+migrations/
+.flaskenv
+src/__pycache__
